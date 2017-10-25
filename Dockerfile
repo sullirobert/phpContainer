@@ -7,7 +7,6 @@ COPY gitclone /usr/local/bin/
 RUN chmod a+x /usr/local/bin/gitclone
 
 EXPOSE 80
-CMD ["gitclone"]
-CMD ["apache2-foreground"]
+CMD ["gitclone", "apache2-foreground"]
 
 
