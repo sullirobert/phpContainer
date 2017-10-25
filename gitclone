@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+echo "Check if we have a repo to serv"
+if [ "$GIT_REPO_URL" ]; then
+	echo "CLONE REPO..."
+	git clone $GIT_REPO_URL /var/www/html/
+ else
+	echo "emptyd" > /var/www/html/index.html
+fi
+exec "$@"
